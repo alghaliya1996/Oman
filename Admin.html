@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>لوحة تحكم المسؤول</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: gold;
+      display: flex;
+    }
+
+    /* الشريط الجانبي */
+    .sidebar {
+      width: 230px;
+      background-color: #111;
+      min-height: 100vh;
+      padding: 20px 10px;
+      box-shadow: 0 0 10px gold;
+      position: fixed;
+      right: 0;
+      top: 0;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 12px 20px;
+      margin-bottom: 10px;
+      color: gold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #333;
+    }
+
+    /* الهيدر */
+    header {
+      background-color: #111;
+      color: gold;
+      padding: 15px;
+      text-align: center;
+      width: 100%;
+      margin-right: 230px; /* لتناسب الشريط الجانبي */
+    }
+
+    header img {
+      width: 50px;
+      height: 50px;
+      vertical-align: middle;
+    }
+
+    header h1 {
+      display: inline-block;
+      margin: 0 10px;
+      vertical-align: middle;
+      font-size: 24px;
+    }
+
+    .main-content {
+      flex: 1;
+      margin-right: 230px; /* لتتناسب مع الشريط الجانبي */
+      padding: 20px;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #222;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px gold;
+    }
+
+    .card i {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: gold;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .card p {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #111;
+      color: gold;
+      text-align: center;
+      padding: 10px;
+      margin-right: 230px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- الشريط الجانبي -->
+  <div class="sidebar">
+    <h2><i class="fas fa-stethoscope"></i> القائمة</h2>
+    <a href="admin_dashboard.html"><i class="fas fa-tachometer-alt"></i> لوحة التحكم</a>
+    <a href="patients.html"><i class="fas fa-user-injured"></i> إدارة المرضى</a>
+    <a href="devices.html"><i class="fas fa-microchip"></i> أداء الأجهزة</a>
+    <a href="plans.html"><i class="fas fa-list-alt"></i> الاشتراكات</a>
+    <a href="login.html"><i class="fas fa-sign-in-alt"></i> تسجيل الدخول</a>
+    <a href="register.html"><i class="fas fa-user-plus"></i> مستخدم جديد</a>
+  </div>
+
+  <div class="main-content">
+    <header>
+      <img src="logo.png" alt="Logo">
+      <h1>لوحة تحكم المسؤول</h1>
+    </header>
+
+    <section class="dashboard">
+      <div class="card">
+        <i class="fas fa-users"></i>
+        <h3>عدد المرضى</h3>
+        <p>120</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-microchip"></i>
+        <h3>الأجهزة الموصولة</h3>
+        <p>85</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-bell"></i>
+        <h3>التنبيهات الأخيرة</h3>
+        <p>5</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-signal"></i>
+        <h3>الاتصال الحالي</h3>
+        <p>متصل</p>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 منصة الصحة في جيبك. جميع الحقوق محفوظة.
+    </footer>
+  </div>
+
+</body>
+</html>
+
